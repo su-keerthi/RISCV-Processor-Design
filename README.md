@@ -1,17 +1,7 @@
-# RISC-V 64-bit Processor Design
+# RISCV 64-bit Processor Design
 
 This project presents a two-phase implementation of a RISC-V 64-bit (RV64I) processor using Verilog. It demonstrates the transition from a simple single-cycle design to a pipelined architecture with hazard handling.
 
----
-
-## Overview
-
-The processor is developed in two stages:
-
-- Phase I: Single-cycle (sequential) processor  
-- Phase II: 5-stage pipelined processor with hazard management  
-
-The objective is to understand both correctness in sequential execution and performance improvements through pipelining.
 
 ---
 
@@ -19,17 +9,15 @@ The objective is to understand both correctness in sequential execution and perf
 
 The initial design follows a single-cycle architecture, where each instruction completes all stages within one clock cycle.
 
-### Key Features
+### Main Features
 - Simple control logic  
 - Direct data paths between components  
 - Unified Control Unit and ALU Control  
-
-### Architecture
-All operations (fetch, decode, execute, memory access, write-back) occur within a single cycle:
+- All operations (fetch, decode, execute, memory access, write-back) occur within a single cycle:
 Instruction Memory → Control Unit → Register File → ALU → Data Memory → Register File
 
-### Limitation
-The clock speed is limited by the longest instruction path (typically load instructions), which restricts performance.
+
+However the clock speed is limited by the longest instruction path (typically load instructions), which restricts performance.
 
 ---
 
@@ -101,6 +89,6 @@ To ensure correct execution in the pipeline, the following mechanisms are implem
 
 ## Future Improvements
 
-- Branch prediction  
+- Dynamic branch prediction  
 - Cache integration  
 - Support for additional RISC-V instruction extensions  
