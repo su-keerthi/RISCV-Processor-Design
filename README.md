@@ -1,4 +1,4 @@
-# RISCV 64-bit Processor Design
+# RISCV 32-bit Processor Design
 
 This project presents a two-phase implementation of a RISC-V 64-bit (RV64I) processor using Verilog. It demonstrates the transition from a simple single-cycle design to a pipelined architecture with hazard handling.
 
@@ -79,9 +79,9 @@ To ensure correct execution in the pipeline, the following mechanisms are implem
 
 ---
 
-## Key Takeaways
+## Sequential vs Pipeline
 
-- Single-cycle design is simple but limited in performance  
+- Sequential design is simple but limited in performance  
 - Pipelining improves throughput significantly  
 - Hazard handling is essential for correctness in pipelined processors  
 
